@@ -27,7 +27,7 @@ apply plugin: 'idea'
 
 ext {
     junitVersion = '4.11'
-    jbossNettyVersion = '3.2.2.Final'
+    jbossNettyVersion = '3.2.9.Final'
     springVersion = '3.2.2.RELEASE'
     springIntegrationVersion = '4.2.5.RELEASE'
     springXdVersion = '1.0.4.RELEASE'

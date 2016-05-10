@@ -178,7 +178,7 @@ public class CrossOriginHttpAdapter extends MessageProducerSupport {
             if (keepAlive) {
                 response.setHeader(CONTENT_LENGTH, response.getContent().readableBytes());
                 response.setHeader(CONNECTION, HttpHeaders.Values.KEEP_ALIVE);
-                response.setHeader("Access-Control-Allow-Origin", "*");
+                response.setHeader("Access-Control-Allow-Origin", "*");//CORS
             }
             if (logger.isDebugEnabled()) {
                 logger.debug("Sending HTTP response:\n" + indent(response.toString()));
