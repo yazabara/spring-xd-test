@@ -1,0 +1,49 @@
+group 'yazabara-spring-xd'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//
+//sourceCompatibility = 1.5
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+//}
+
+
+description = 'Feed Source Module'
+group = 'org.springframework.xd.samples'
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.springsource.org/libs-snapshot" }
+    maven { url "http://repo.springsource.org/plugins-release" }
+}
+
+apply plugin: 'idea'
+
+ext {
+    junitVersion = '4.11'
+    jbossNettyVersion = '3.2.2.Final'
+    springVersion = '3.2.2.RELEASE'
+    springIntegrationVersion = '4.2.5.RELEASE'
+    springXdVersion = '1.0.4.RELEASE'
+}
+
+dependencies {
+    compile("org.springframework:spring-core:$springVersion")
+    compile("org.springframework:spring-context-support:$springVersion")
+    compile("org.springframework.integration:spring-integration-feed:$springIntegrationVersion")
+    compile("org.springframework.integration:spring-integration-core:$springIntegrationVersion")
+    compile("org.jboss.netty:netty:$jbossNettyVersion")
+    compile("org.springframework.xd:spring-xd-module-spi:$springXdVersion")
+
+    // Testing
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.springframework:spring-test:$springVersion"
+}
+
+defaultTasks 'build'
