@@ -10,13 +10,13 @@ public class CorsHttpClientTest {
 
     @Test
     public void testSendEventMessage() throws Exception {
-        int count = 100;
-        CorsHttpClient client = new CorsHttpClient("http://localhost:9001");
-        for (int i = 0; i < count; i++) {
-            String json = "[" + EventJsonGenerator.generateJson() + "]";
-            System.out.println(json);
-            client.sendEventMessage(json);
-        }
+//        int count = 100;
+//        CorsHttpClient client = new CorsHttpClient("http://localhost:9001");
+//        for (int i = 0; i < count; i++) {
+//            String json = "[" + EventJsonGenerator.generateJson() + "]";
+//            System.out.println(json);
+//            client.sendEventMessage(json);
+//        }
 
     }
 }
